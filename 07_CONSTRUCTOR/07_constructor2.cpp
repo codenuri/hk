@@ -14,7 +14,6 @@ public:
 		name = n;
 		age = a;
 	}	
-
 	Person()
 	{
 		std::cout << "생성자2 호출됨" << std::endl;
@@ -33,4 +32,4 @@ int main()
 	Person p1("kim", 28); // 생성자1 호출
 	Person p2;			  // 생성자2 호출
 
-} 
+} // p1, p2 파괴. 이순간 소멸자 호출
