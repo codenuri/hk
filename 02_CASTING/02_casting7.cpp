@@ -19,6 +19,13 @@
 }
 
 
+/*
+int* p = static_cast<int*>(malloc(40));
 
 
+double* p = malloc(40);
+char* p = malloc(40);
 
+int* p = new int;
+double* p = new double;
+*/
