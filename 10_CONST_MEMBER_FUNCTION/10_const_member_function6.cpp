@@ -1,8 +1,9 @@
 class vector
 {
 	int* ptr;
+	int size;
 public:
-	vector(int sz) 
+	vector(int sz) : size(sz)
 	{
 		ptr = new int[sz];
 	}
@@ -13,5 +14,5 @@ public:
 int main()
 {
 	vector v(10);
-	v[0] = 10;
+	v[0] = 10;	// v.operator[](0) = 10
 }
