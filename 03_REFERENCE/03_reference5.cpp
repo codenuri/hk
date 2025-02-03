@@ -1,10 +1,14 @@
 int x = 0;
 
-int  foo() { return x; } 
-int& goo() { return x; } 
+int  foo() { return x; } // "x" 가 반환되는 것이 아니라 x의 값 "0" 이 반환
+int& goo() { return x; } // "x" 의 별명 (alias) 를 반환해달라는 의미
 
 int main()
 {
-	foo() = 20; 
-	goo() = 20; 
+	foo() = 20; 	// "0 = 20" 이므로 에러
+	goo() = 20; 	// "x = 20" 이므로 에러 아님
+
+	// 함수가 reference 를 반환하면 함수 호출식을 등호의 왼쪽에 놓을수 있다.
+	// => 흔히 "lvalue 가 될수 있다" 라고 합니다.
+	// => 왜 ?? 함수 호출을 왼쪽에 놓습니까 ?? 내일 부터 많이 등장.. 
 }
